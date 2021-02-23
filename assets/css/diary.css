@@ -1,0 +1,201 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 21px;
+    font-family: 'Open Sans';
+    overflow-x: hidden;
+}
+html, body {
+    height: 100%;
+    position: relative;
+}
+h1 {
+    font-family: 'Raleway';
+    font-size: 2.7em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #222;
+    margin-bottom: 0.3em;
+}
+p {
+    font-weight: 200;
+}
+.fl {
+    float: left;
+    margin: 20px;
+}
+.fr {
+    float: right;
+    margin: 20px;
+}
+.hero {
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    background-size: cover;
+    background-position: center 30%;
+}
+.hero .hamb-wrap {
+    height: 30px;
+    width: 40px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    z-index: 2;
+}
+.hero .hamb {
+    height: 3px;
+    width: 35px;
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: 0.2s;
+    border-radius: 10% 10% 10% 10% / 40% 40% 40% 40%;
+}
+.hero .hamb:before, .hero .hamb:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    height: 3px;
+    width: 100%;
+    transition: 0.2s;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+}
+.hero .hamb:before {
+    top: 8px;
+}
+.hero .hamb:after {
+    top: -8px;
+}
+.hero .active {
+    background: none;
+    transition: 0.2s;
+}
+.hero .active:before, .hero .active:after {
+    transition: 0.2s;
+    top: 0;
+}
+.hero .active:before {
+    transform: rotate(45deg);
+}
+.hero .active:after {
+    transform: rotate(-45deg);
+}
+.hero .logo {
+    color: #1D9B5B;
+    font-size: 2em;
+    margin: 0 0 0 85px;
+    line-height: 2.2;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
+}
+.hero nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+    font-family: 'Raleway';
+    font-size: 2em;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+}
+.hero nav ul {
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+.hero nav li {
+    list-style-type: none;
+    margin: 25px 0;
+    position: relative;
+}
+.hero nav a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.content {
+    min-height: 100%;
+    margin-left: 40%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 4%);
+}
+.form-control{
+    color: white !important;
+}
+#diary{
+    background-color: #282E37;
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+   .night {
+        width: 80%;
+        height: 0%;
+        transform: rotateZ(45deg);
+    }
+    .hero {
+        height: 250px;
+        width: 100%;
+        position: relative;
+    }
+    .hero nav {
+        font-size: 1.7em;
+    }
+    .content {
+        margin-left: 0;
+        padding-top: 0;
+        background-color: rgba(255, 255, 255, 4%);
+    }
+   #diary{
+    background-color:#282E37;
+    }
+}
+.flyinTxtCont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-bottom: 10%;
+}
+.flyIn {
+    text-transform:uppercase;
+    line-height:1.2em;
+    position:relative;
+    text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
+}
+.line {
+    transition-delay:.4s; 
+    transition:.6s ease in;
+    animation: txtFlyIn .6s linear;
+    letter-spacing: 3px;
+    transition: transform .2s;
+}
+@keyframes txtFlyIn{
+    0% { transform:translateX(-100%); }
+    100% { transform:translateX(0%); }
+}
+.line:hover{
+    transform: translateY(-10%);
+}
+.line > a:hover{
+    color: #1D9B5B;
+}

@@ -1,0 +1,48 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #121212;
+}
+.head{
+    background-image: url(../img/head.jpg) ;
+    background-size: cover;
+}
+.btn-head{
+    color: white;
+    background-color: transparent;
+    border: 1px white solid !important;
+}
+.btn-head:hover{
+    color:black;
+    background-color: white;
+}
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+#mainNav .nav-link.active{
+    background-color:hsla(0,0%,100%,0) !important;
+    color:#1D9B5B;
+}
+#mainNav .nav-link:hover{
+    background-color:hsla(0,0%,100%,0) !important;
+    color:#1D9B5B;
+}
+.card{
+    background-color: rgba(255, 255, 255, 4%);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    transition: transform .3s;
+}
+.card:hover{
+    transform: scale(1.1);
+    background-color:rgba(255, 255, 255, 8%);
+}
+    
